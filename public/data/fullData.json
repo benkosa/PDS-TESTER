@@ -7,12 +7,12 @@
         "answers": [
           {
             "answer": "Select * fromTAB t order by value(t);",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
             "answer": "Select * from TAB t order by t.tried;",
-            "isCorrect": true,
+            "isCorrect": false,
             "id": 1
           },
           {
@@ -76,7 +76,7 @@
         "question": "Zoraďte tieto príkazy do správneho poradia, ak cur1 je správne deklarovaný kurzor pre príkaz Select priezvisko from os_udaje; a priezv je premenná typu os_udaje.priezvisko%TYPE. (1) END IF; (2) HTP.P(priezv); (3) CLOSE cur1; (4) END LOOP; (5) ELSE (6) FETCH cur1 INTO priezv; (7) EXIT; (8) OPEN cur1; (9) IF cur1%FOUND THEN (10) LOOP (2 b):",
         "answers": [
           {
-            "answer": "TODO",
+            "answer": "8 10 6 9 2 5 7 1 4 3",
             "isCorrect": false,
             "id": 0
           }
@@ -86,7 +86,7 @@
         "question": "Napíšte najvhodnejší index pre tabuľku P_ODVOD_PLATBA pre nasledovný dotaz: select rod_cislo, meno, priezvisko, sum(suma) from p_osoba JOIN p_poistenie USING ( rod_cislo ) JOIN p_odvod_platba USING ( id_poistenca ) where to_char(obdobie, 'YYYY') = 2016 group by rod_cislo, meno, priezvisko ; (2 b):",
         "answers": [
           {
-            "answer": "TODO",
+            "answer": "CREATE INDEX IX1 ON p_odvod_platba(to_char(obdobie, 'YYYY'), suma) TODO 1b koment: suma(sum)",
             "isCorrect": true,
             "id": 0
           }
@@ -97,12 +97,12 @@
         "answers": [
           {
             "answer": "iba vo VARRAY",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
             "answer": "iba v NESTED TABLE",
-            "isCorrect": true,
+            "isCorrect": false,
             "id": 1
           },
           {
@@ -122,7 +122,7 @@
         "answers": [
           {
             "answer": "všetky príkazy",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -172,12 +172,12 @@
         "answers": [
           {
             "answer": "T5,T6,T7",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
             "answer": "T3,T4,T8",
-            "isCorrect": true,
+            "isCorrect": false,
             "id": 1
           },
           {
@@ -207,7 +207,7 @@
         "answers": [
           {
             "answer": "až po všetkých zápisoch do log. žurnálu modifikuje DB",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -222,7 +222,7 @@
           },
           {
             "answer": "sa po každej modifikácii DB zapíše operácia do log. žurnálu",
-            "isCorrect": true,
+            "isCorrect": false,
             "id": 3
           }
         ]
@@ -232,7 +232,7 @@
         "answers": [
           {
             "answer": "ziadna odpoved nie je spravna",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -257,7 +257,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -282,7 +282,7 @@
         "answers": [
           {
             "answer": "1, 2, 3",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -297,8 +297,888 @@
           },
           {
             "answer": "3, 1, 2",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": " Operácia Split vytvorí z relácie R(A1,A2...An) (2 b):",
+        "answers": [
+          {
+            "answer": "dve relácie R1 a R2, také že každý riadok z R patrí práve do jednej z relácií R1, alebo R2",
             "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "dve relácie R1 a R2, také že každý riadok z R patrí aspoň do jednej z reláciíR1 a R2",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "dve relácie R1 a R2, také že niektoré riadky z R patria do oboch reláciíR1 a R2",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "Konzistencia databázy je (2 b):",
+        "answers": [
+          {
+            "answer": "stav DB, ak sú splnené všetky integritné obmedzenia",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "vzťah medzi entitami",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "definícia dát na internej úrovni",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "V akej situácii by ste preferovali použitie súboru typu BFILE pred BLOB? (2 b):",
+        "answers": [
+          {
+            "answer": "ked je potrebne data ukladat na disku nie v db",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "V ODL je používanie kľúčov je: (2 b):",
+        "answers": [
+          {
+            "answer": "povinné",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "zakázané",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "nepovinné",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "Ktorý z indexov bude použitý pri vykonaní nasledovného selectu? select * from p_osoba where UPPER(priezvisko) like 'Poko%'; (2 b):",
+        "answers": [
+          {
+            "answer": "CREATE INDEX ind1 on p_osoba( UPPER(priezvisko) );",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "ani jeden z nich",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "CREATE INDEX ind2 on p_osoba( priezvisko );",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "CREATE INDEX ind3 on p_osoba( priezvisko,meno );",
+            "isCorrect": false,
             "id": 3
+          }
+        ]
+      },
+      {
+        "question": " Scroll kurzor je kurzor, ktorým (2 b):",
+        "answers": [
+          {
+            "answer": "môžem získať hodnotu ľubovoľnej položky v kurzore",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "môžem použiť len na získanie hodnoty zo selectu, ktorý vracia práve jeden riadok",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "môžem získať len hodnotu nasledujúcej položky v kurzore",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "Pre zabezpečenie proti uviaznutiu v DDBS je potrebné: (2 b):",
+        "answers": [
+          {
+            "answer": "konštruovať globálny graf precedencií",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "synchronizovať čas medzi jednotlivými uzlami",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "konštruovať lokálne grafy precedencií",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "Perzistencia transakcie znamená (2 b):",
+        "answers": [
+          {
+            "answer": "že potvrdené výsledky transakcií sú uložené v databáze",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "že potvrdené výsledky transakciímôžu byť vrátené pomocou príkazu rollback",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "že všetky zadané operácie budú vykonané",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": " Čo platí pre uvedené premenné? Select count(*) into K1 from p_poistenie JOIN p_odvod_platba using(id_poistenca); Select count(*) into K2 from p_poistenie JOIN p_odvod_platba using(id_poistenca) JOIN p_zamestnavatel ON ( id_platitela = ICO ); Select count(*) into K3 from p_poistenie JOIN p_odvod_platba using(id_poistenca) LEFT JOIN p_zamestnavatel ON ( id_platitela = ICO ); Select count(*) into K4 from p_poistenie JOIN p_odvod_platba using(id_poistenca) where id_platitela IN ( select ico from p_zamestnavatel); (2 b):",
+        "answers": [
+          {
+            "answer": "K1 = K3 >= K2 = K4",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "K3 >= K2 >= K1 >= K4",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "K1 = K3 < K2 < K4",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "K1 = K2 = K3 = K4",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": " Pri ktorom protokole sa DB modifikuje pred zápisom do log. Žurnálu (2 b):",
+        "answers": [
+          {
+            "answer": "žiadnom",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "zamykania",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "metóde kontrólneho bodu",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "všetkých metódach",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Adaptive Join je metóda, ktorá: (2 b):",
+        "answers": [
+          {
+            "answer": "na základe množstva údajov vyberie buď metódu Hash Match alebo Nested Loop.",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "preferuje metódu Merge Join pred Nested Loop.",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "prinúti optimalizátor použiť Hash Match, ak je tabuľka particiovaná.",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "vykoná spájanie tabuľky na základe definovaného materializovaného pohľadu.",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": " Určite správny príkaz na vloženie nového riadku do tabuľky zamestnanci s nasledovnou štruktúrou: CREATE TYPE t_osoba IS OBJECT ( rc char(11), meno varchar2(20), priezvisko varchar2(20) ) NOT FINAL; CREATE TYPE T_zam UNDER t_osoba( oc number, pozicia varchar(10) ); CREATE TABLE zamestnanci OF t_zam; (2 b):",
+        "answers": [
+          {
+            "answer": "insert into zamestnanci values ( t_osoba('765402/8877', 'Meno','Priezv'), 123, 'sef');",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "insert into zamestnanci values ( t_zam('765402/8877', 'Meno','Priezv', 123, 'sef'));",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "insert into zamestnanci values ( t_osoba3('765402/8877', 'Meno','Priezv'), t_zam(123, 'sef'));",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "Aký je rozdiel medzi validným a správne štrukturovaným XML dokumentom? (2 b):",
+        "answers": [
+          {
+            "answer": "TODO",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Aké prostriedky môžeme použiť, ak potrebujeme spracovať výsledky selectu, ktorého stĺpce závisia od parametrov procedúry? (2 b):",
+        "answers": [
+          {
+            "answer": "dynamický kurzor",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "select bulk collect",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "select into",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "execute immediate",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Aký je rozdiel medzi súborom typu CLOB a NCLOB? (2 b):",
+        "answers": [
+          {
+            "answer": "TODO",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Čo platí pre atribúty kolekcie typu NESTED TABLE? (2 b):",
+        "answers": [
+          {
+            "answer": "count <= last",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "count = last",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "count < last = limit",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "count = last = limit",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Aký je daný rozvrh S = {O11, O12, O13, O21, O22, O23, O14, O15, O16, O24, O25, O26}, ak sú dané dve Transakcie T1= {O11, O12, O13, O14, O15, O16} a T2 = {O21, O22, O23, O24,O25,O26}. (2 b):",
+        "answers": [
+          {
+            "answer": "serializovany",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Fyzický plán vykonania tvorí: (2 b):",
+        "answers": [
+          {
+            "answer": "postupnosť operácií relačnej algebry doplnené o operácie pre prechádzanie tabuľkou",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "postupnosť operáciírelačnej algebry",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "množina prístupových metód k dátam",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "NESTED TABLE je (2 b):",
+        "answers": [
+          {
+            "answer": "pole neobmedzenej dĺžky, ktoré dovoľuje vymazávať určenú položku",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "pole neobmedzenej dĺžky, ktoré nedovoľuje vymazávať určenú položku",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "pole obmedzenej dĺžky, ktoré dovoľuje vymazávať určenú položku",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "pole obmedzenej dĺžky, ktoré nedovoľuje vymazávať určenú položku",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Ak udalosť spôsobí vyslanie správy z uzla S1 na uzol S2, tak: (2 b):",
+        "answers": [
+          {
+            "answer": "čas prijatia správy na uzle S2 musí byť väčší ako čas odoslania správy z uzla S1",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "čas prijatia správy na uzle S2 nemusí byť väčší ako čas odoslania správy z uzla S1",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "čas prijatia správy na uzle S2 musí byť rovnaký ako čas odoslania správy z uzla S1",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "čas prijatia správy na uzle S2 môže byť väčší ako čas odoslania správy z uzla S1",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Čo sa stane, ak použijeme hint append? insert /*+APPEND*/ into osoba select * from platitel; (2 b):",
+        "answers": [
+          {
+            "answer": "constrainty budú kontrolované až po vložení všetkých dát",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "dáta budú pridané len do tabuľky a indexy nebudú modifikované",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "constrainty sa nebudú vôbec kontrolovať",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "constrainty budú kontrolované pre každý vkladaný riadok hneď pri vkladaní",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "V akej štruktúre sa ukladajú šifrovacie kľúče typu SecureFile? (2 b)",
+        "answers": [
+          {
+            "answer": "TODO",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Metóda kontrolného bodu Zoznam bežiacich transakcií v okamihu posledného kontrolného bodu . Ktoré transakcie už po havárii nebude spracovať (ani UNDO, ani REDO)? (2 b):",
+        "answers": [
+          {
+            "answer": "1, t2",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Návratová hodnota MAP metódy (2 b):",
+        "answers": [
+          {
+            "answer": "môže byť ľubovoľného skalárneho typu",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "môže byť ľubovoľného typu",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "môže byť len typu objekt",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "môže byť len celočíselného typu",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Určite ktorý z príkazov vráti SET množinu Príkaz 1: select id_poistenca, dat_od from p_poistenie; Príkaz 2: select DISTINCT id_poistenca, dat_od from p_poistenie; Príkaz 3: select id_poistenca from p_poistenie; (2 b):",
+        "answers": [
+          {
+            "answer": "všetky príkazy",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "príkazy1a2",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "ani jeden príkaz",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "len príkaz 2",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "V akej štruktúre sa ukladajú zmenové vektory pri práci s materializovaným pohľadom? (2 b):",
+        "answers": [
+          {
+            "answer": "log view",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "online redo log",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "aj online undo, aj redo",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "online undo",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Aký význam má značka High Water Mark (HWM) pri použití metódy Index Range Scan? (2 b):",
+        "answers": [
+          {
+            "answer": "žiadny",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "udržiadava poslednú hodnotu ROWID na spracovanie v rámci indexu.",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "definuje spôsob načítania blokov z databázy do pamäte.",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "ohraničuje prehľadanie indexu sprava na listovej úrovni",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Čo vyjadruje písmeno B? select * from A.B@C; (2 b):",
+        "answers": [
+          {
+            "answer": "tabuľku",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "schému",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "inštanciu",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "connect string",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Pri ktorých DML operáciách sa nikdy nemení index? (2 b):",
+        "answers": [
+          {
+            "answer": "TODO",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Konzistencia databázy je (2 b):",
+        "answers": [
+          {
+            "answer": "stav DB, ak sú splnené všetky integritné obmedzenia",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "vzťah medzi entitami",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "definícia dát na internej úrovni",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "Ktorý typ kolekcie vyžaduje konštruktor ? (1 b):",
+        "answers": [
+          {
+            "answer": "nested table a varray",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "Všetky",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "iba varray",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "iba nested table",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Pre select z viacerých inštancií platí: (2 b):",
+        "answers": [
+          {
+            "answer": "Najskôr je potrebné vytvoriť DATABASE LINK.",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "Tento select je možné vykonať bez potreby vytvorenia akýchkoľvek dodatočných objektov.",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "Najskôr je potrebné vytvoriť DIRECTORY.",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "Takýto select môže vykonať len systémový administrátor.",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Pre dvojfázový potvrdzovací protokol platí: (2 b):",
+        "answers": [
+          {
+            "answer": "Ak ktorákoľvek z podtransakcií vyšle operáciu ABORT, globálna transakcia musí vysielať signál ABORT aj ostatným podtransakciám",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "Ak ktorákoľvek z podtransakcií vyšle operáciu COMMIT, globálna transakcia musí vysielať signál ABORT aj ostatným podtransakciám",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "Ak každá z podtransakcií vyšle operáciu ABORT, globálna transakcia musí vysielať signál ABORT aj ostatným podtransakciám",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "Ak len jedna z viacerých podtransakcií vyšle operáciu COMMIT, globálna transakcia musí vysielať signál COMMIT aj ostatným podtransakciám",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Pomocou SQL príkazu generujte príkazy na pridelenie práva 'create any directory' všetkým užívateľom z predmetu II07 v šk. roku 2005. (3 b):",
+        "answers": [
+          {
+            "answer": "SELECT 'GRANT CREATE ANY DIRECTORY TO ' || login FROM os_udaje WHERE cis_predm = 'II07' AND EXTRACT(YEAR FROM skrok) = 2005",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Na akom princípe funguje aspekt deduplikácie pri súboroch? Nad ktorými typmi je možné ho aplikovať? (2 b):",
+        "answers": [
+          {
+            "answer": "Vypocita sa hash suboru, a ak sa zhoduje s hashom suboru, ktory je uz ulozeny v DB, pouzije sa uz ulozeny subor. Da sa aplikovat na SecureFile.",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Aký je daný rozvrh S = {O11, O12, O13, O21, O22, O23, O24, O25, O26, O14, O15, O16}, ak sú dané dve Transakcie T1= {O11, O12, O13, O14, O15, O16} a T2 = {O21, O22, O23, O24,O25,O26}. (2 b):",
+        "answers": [
+          {
+            "answer": "neserializovateľný",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "serializovateľný",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "sériový",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "Aká hodnota bude vypísaná na obrazovke: declare type t_pole IS TABLE OF integer; pole t_pole; begin pole:=t_pole(10,20,30,40,50,60,70); dbms_output.put_line(pole(pole.next(2))); end; (1 b):",
+        "answers": [
+          {
+            "answer": "30",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "3",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "4",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "20",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": " Aká hodnota bude vypísaná na obrazovke: declare type t_pole IS VARRAY(10) OF integer; pole t_pole; begin pole:=p_pole(10,20,30,40,50,60,70); pole.delete(4); dbms_output.put_line(pole.limit); end; (1 b):",
+        "answers": [
+          {
+            "answer": "nebude vypísané nič, pretože bude vyvolaná výnimka",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "nebude vyvolaná výnimka a vypíse 70",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "nebude vyvolaná výnimka a vypíse 7",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "nebude vyvolaná výnimka a vypíse 10",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "V akej štruktúre sa ukladá plán vykonania? (2 b):",
+        "answers": [
+          {
+            "answer": "shared pool",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "log buffer",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "data dictionary",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "buffer cache",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Čo znamená pravidlo idenpotencie pre operáciu UNDO? (2 b):",
+        "answers": [
+          {
+            "answer": "Stačí zopakovať všetky úspešne ukončené transakcie.",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "Stačí vrátiť stav DB objektu do stavu pred prvou zmenou.",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "Stačí zmeniť stav DB objektu do stavu po poslednej zmene.",
+            "isCorrect": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "question": "Čo všetko je potrebné vykonať, aby sme zaručili, že do tabuľky osoba_xml budú vložené len XML dokumenty, ktoré sú validné voči schéme, ktorú máme v súbore osoba.xsd? ( nemusíte písať príkazy, stačí slovný popis v správnom poradí) (2 b):",
+        "answers": [
+          {
+            "answer": "Musime mat vytvorene directory, kde budeme schemy ukladat. Potom musime zaregistrovat schemu. Pri vytvoreni tabulky typu XML pridat aj zaregistrovanu schemu. Nasledne vytvorit trigger pred kazdym insertom, ktory bude mat za ulohu overit XML voci scheme.",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": " Pred ktorými príkazmi začína nová transakcia? (stačí napísať čísla riadkov) -- pripojenie a vytvorenie session... 1 insert into pom values (1,2,'dnes'); 2 SAVEPOINT sp1; 3 insert into pom ( 2,2,'vcera'); 4 ROLLBACK TO sp1; 5 select * from pom; 6 create table pom_ou as select * from os_udaje where rod_cislo like '79%'; 7 select * from pom_ou; 8 COMMIT; 9 select * from pom; (2 b):",
+        "answers": [
+          {
+            "answer": "1,7,9",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Čo vyjadruje písmeno C? select * from A.B@C; (2 b):",
+        "answers": [
+          {
+            "answer": "db link",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Čo vyjadruje písmeno A? select * from A.B@C; (2 b):",
+        "answers": [
+          {
+            "answer": "schému",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "db link",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "tabuľku",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "connect string",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Môže existovať štruktúra typu BLOB taká, že existuje smerník, ale neexistuje hodnota? Ak áno, ako taká štruktúra vznikne? (2 b):",
+        "answers": [
+          {
+            "answer": "Ano, moze. Ak dva zaznamy sa odkazuju na ten isty blob, a jeden z tych zaznamov vymazem, vymaze sa aj blob, a v druhom zazname ostane referencia.",
+            "isCorrect": true,
+            "id": 0
           }
         ]
       },
@@ -307,7 +1187,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -332,7 +1212,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -357,7 +1237,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -382,7 +1262,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -407,7 +1287,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -432,7 +1312,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -457,7 +1337,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -482,7 +1362,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -507,7 +1387,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -532,7 +1412,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -557,7 +1437,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -582,7 +1462,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -607,7 +1487,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -632,7 +1512,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -657,7 +1537,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -682,7 +1562,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -707,7 +1587,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -732,7 +1612,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -757,7 +1637,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -782,7 +1662,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -807,7 +1687,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -832,7 +1712,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -857,7 +1737,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -882,7 +1762,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -907,7 +1787,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -932,7 +1812,7 @@
         "answers": [
           {
             "answer": "replace",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           },
           {
@@ -952,7 +1832,56 @@
           }
         ]
       },
-
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
       {
         "question": "Na obrázku je grafické znázornenie spotrebnej funkcie:",
         "picture": "data/pictures/t07q19.png",
