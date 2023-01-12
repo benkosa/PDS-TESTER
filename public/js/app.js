@@ -214,6 +214,7 @@ var app = angular
             // parse questions
             data.forEach(test => {
                 test.questions.forEach(question => {
+                    shuffleAnswers(question);
                     question.question = question.question
                     .replace(/\;/g, ";<br>")
                     .replace(/select/gi, "<br>select")
