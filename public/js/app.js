@@ -211,6 +211,27 @@ var app = angular
                 }                
             }
 
+            data.forEach(test => {
+                test.questions.forEach(question => {
+                    question.question = question.question
+                    .replace(/\;/g, ";<br>")
+                    .replace(/select/gi, "<br>select")
+                    .replace(/declare/gi, "<br>declare")
+                    .replace(/from/gi, "<br>&nbsp&nbsp&nbspfrom") 
+                    .replace(/join/gi, "<br>&nbsp&nbsp&nbspjoin") 
+                    .replace(/where/gi, "<br>where")
+                    .replace(/group by/gi, "<br>group by")
+                    .replace(/if\(/gi, "<br>if(")
+                    .replace(/dbms/gi, "<br>dbms")
+                    .replace(/order by/gi, "<br>order by")
+                    .replace(/\//gi, "/<br>")
+                    .replace(/begin/gi, "begin<br>")
+                    console.log(question);     
+                })
+            });
+
+            console.log(data);
+
             /**
              * schovavanie a zobrazovanie nazvu test pri scrolovani
              */
