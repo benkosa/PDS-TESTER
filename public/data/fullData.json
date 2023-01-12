@@ -1,0 +1,985 @@
+[
+  {
+    "name": "Teória",
+    "questions": [
+      {
+        "question": "Majme tabuľku objektov typu t_osoba, pričom tento typ obsahuje nasledovnú metódu na triedenie objektov: map member function tried return integer Ktorý z nasledujúcich príkazov Select bude správne triediť podľa objektov? (2 b):",
+        "answers": [
+          {
+            "answer": "Select * fromTAB t order by value(t);",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "Select * from TAB t order by t.tried;",
+            "isCorrect": true,
+            "id": 1
+          },
+          {
+            "answer": "Select * from TAB t order by value(t_osoba);",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "Select * from TAB t order by t;",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Aké hodnoty budú vypísané? declare type t_pole is table of integer; pole t_pole; begin pole := t_pole(1,2,3,4,5,6,7,8);pole.delete(2); FOR I in 1 .. pole.count LOOP if (pole.exists(i)) then dbms_output.put_line(pole(i)); end if; END LOOP; end; /",
+        "answers": [
+          {
+            "answer": "1 3 4 5 6 7",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Podmienka serializovateľnosti je ? (2 b):",
+        "answers": [
+          {
+            "answer": "ze rozvrh dava rovnaky vysledok ako seriovy rozvrh",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Ak už existuje na objekt A zámok typu S-LOCK, potom: (2 b):",
+        "answers": [
+          {
+            "answer": "iná transakcia môže získať len zámok typu S-LOCK",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "iná transakcia môže získať zámok typu X-LOCK aj typu S-LOCK",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "iná transakcia nemôže získať X-LOCK ani S-LOCK",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "iná transakcia môže získať len zámok typu X-LOCK",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Zoraďte tieto príkazy do správneho poradia, ak cur1 je správne deklarovaný kurzor pre príkaz Select priezvisko from os_udaje; a priezv je premenná typu os_udaje.priezvisko%TYPE. (1) END IF; (2) HTP.P(priezv); (3) CLOSE cur1; (4) END LOOP; (5) ELSE (6) FETCH cur1 INTO priezv; (7) EXIT; (8) OPEN cur1; (9) IF cur1%FOUND THEN (10) LOOP (2 b):",
+        "answers": [
+          {
+            "answer": "TODO",
+            "isCorrect": false,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Napíšte najvhodnejší index pre tabuľku P_ODVOD_PLATBA pre nasledovný dotaz: select rod_cislo, meno, priezvisko, sum(suma) from p_osoba JOIN p_poistenie USING ( rod_cislo ) JOIN p_odvod_platba USING ( id_poistenca ) where to_char(obdobie, 'YYYY') = 2016 group by rod_cislo, meno, priezvisko ; (2 b):",
+        "answers": [
+          {
+            "answer": "TODO",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "V ktorom type kolekcie nie je možné vymazať určitý prvok? (1 b):",
+        "answers": [
+          {
+            "answer": "iba vo VARRAY",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "iba v NESTED TABLE",
+            "isCorrect": true,
+            "id": 1
+          },
+          {
+            "answer": "aj v NESTED TABLE aj vo VARRAY",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "v žiadnej",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Určite ktorý z príkazov vráti SET množinu Príkaz 1: select id_poistenca, dat_od from p_poistenie; Príkaz 2: select DISTINCT id_poistenca, dat_od from p_poistenie; Príkaz 3: select id_poistenca from p_poistenie; (2 b):",
+        "answers": [
+          {
+            "answer": "všetky príkazy",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "len príkaz 2",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "ani jeden príkaz",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "príkazy 1 a 2",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Majme tabuľku objektov typu t_osoba: create table osoby ( os_cislo integer, osoba t_osoba ); Čo je potrebné doplniť do objektu t_osoba, aby bolo možné úspešne spustiť nasledovný príkaz? select * from osoby p order by p.osoba; (2 b):",
+        "answers": [
+          {
+            "answer": "doplniť MAP, alebo ORDER funkciu",
+            "isCorrect": true,
+            "id": 0
+          },
+          {
+            "answer": "doplniť MAP aj ORDER funkciu",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "funkciu s návratovou hodnotou typu t_osoba",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "nie je potrebné nič doplniť",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Metóda kontrolného boduOperáciu REDO aplikujem pri obnove databázy po havárii na transakcie: (2 b):",
+        "answers": [
+          {
+            "answer": "T5,T6,T7",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "T3,T4,T8",
+            "isCorrect": true,
+            "id": 1
+          },
+          {
+            "answer": "T3,T4,T8,T9",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "T5,T6,T7",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Pri ktorých DML operáciách sa nikdy nemení index? (2 b):",
+        "answers": [
+          {
+            "answer": "TODO",
+            "isCorrect": false,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Pri dvojfázovom potvrdzovacom protokole (2 b):",
+        "answers": [
+          {
+            "answer": "až po všetkých zápisoch do log. žurnálu modifikuje DB",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "až po všetkých modifikáciách DB sa operácie zapíšu do log. žurnálu",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "sa po každom zápise do log. žurnálu modifikuje DB",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "sa po každej modifikácii DB zapíše operácia do log. žurnálu",
+            "isCorrect": true,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "declare type t_pole IS VARRAY(10) OF integer; i integer; pole t_pole; j integer; begin pole := t_pole(1,2,3,4,5,6,7,8); pole.delete(3); j := pole.first; for i in 1 .. XXXXXX loop dbms_output.put_line(pole(j)); j := pole.next(j); end loop; end; / Čo je potrebné doplniť namiesto XXXXXX, aby boli vypísané všetky prvky poľa. (1 b): (ak zaciarknete ze ziadna nieje spravna lebo nad varray sa neda spravit delete(3) tak vam to uzna ked pojdete na reklamaciu)",
+        "answers": [
+          {
+            "answer": "ziadna odpoved nie je spravna",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "iba pole.last",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "iba pole.limit",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "iba pole.count",
+            "isCorrect": true,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "Zotrieďte nasledovné metódy podľa zložitosti od najjednoduchšieho po najzložitejší: (1) MERGE SORT JOIN (2) NESTED LOOP (3) HASH JOIN (2 b):",
+        "answers": [
+          {
+            "answer": "1, 2, 3",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "3, 2, 1",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "sú rovnako zložité",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "3, 1, 2",
+            "isCorrect": true,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "question": "replace",
+        "answers": [
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "replace",
+            "isCorrect": false,
+            "id": 3
+          }
+        ]
+      },
+
+      {
+        "question": "Na obrázku je grafické znázornenie spotrebnej funkcie:",
+        "picture": "data/pictures/t07q19.png",
+        "answers": [
+          {
+            "answer": "S = -5 + MPS * Yd",
+            "isCorrect": false,
+            "id": 0
+          },
+          {
+            "answer": "S = 5 + MPS * Yd",
+            "isCorrect": false,
+            "id": 1
+          },
+          {
+            "answer": "C = -5 + MPC * Yd",
+            "isCorrect": false,
+            "id": 2
+          },
+          {
+            "answer": "C = 5 + MPC * Yd",
+            "isCorrect": true,
+            "id": 3
+          }
+        ]
+      }
+    ]
+  }
+ 
+]
