@@ -211,6 +211,7 @@ var app = angular
                 }                
             }
 
+            // parse questions
             data.forEach(test => {
                 test.questions.forEach(question => {
                     question.question = question.question
@@ -225,12 +226,9 @@ var app = angular
                     .replace(/dbms/gi, "<br>dbms")
                     .replace(/order by/gi, "<br>order by")
                     .replace(/\//gi, "/<br>")
-                    .replace(/begin/gi, "begin<br>")
-                    console.log(question);     
-                })
+                    .replace(/begin/gi, "begin<br>");
+                });
             });
-
-            console.log(data);
 
             /**
              * schovavanie a zobrazovanie nazvu test pri scrolovani
