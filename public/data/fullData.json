@@ -1301,6 +1301,16 @@
             "id": 0
           }
         ]
+      },
+      {
+        "question": "Vertikálne fragmentujte reláciu P_PRISPEVKY aspoň na 2 fragmenty. (2 b):",
+        "answers": [
+          {
+            "answer": "define fragment prisp_1 as select obdobie, id_poberatela id_typu from p_prispevky; define fragment prisp_2 as select obdobie, id_poberatela, kedy, suma from p_prispevky;",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
       }
     ]
   }
