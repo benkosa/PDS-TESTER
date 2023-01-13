@@ -1321,6 +1321,16 @@
             "id": 0
           }
         ]
+      },
+      {
+        "question": "Základné operácie datawarehouse?",
+        "answers": [
+          {
+            "answer": "Slice, Dice, Roll-up, Roll-down, Pivot",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
       }
     ]
   }
