@@ -1311,6 +1311,16 @@
             "id": 0
           }
         ]
+      },
+      {
+        "question": "Čo je hint no logging?",
+        "answers": [
+          {
+            "answer": "nebudu sa generovat/ukladat data do logov pre operaciu redo",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
       }
     ]
   }
