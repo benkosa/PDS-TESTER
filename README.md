@@ -1,5 +1,5 @@
 # PDS-TESTER 2.0
-Tester pre predmet Základy ekonomickej teórie  na Žilinskej univerzite
+Tester pre predmet Pokročilé databázové systémy  na Žilinskej univerzite
 
 Link na tester: https://pds-tester.web.app/
 
