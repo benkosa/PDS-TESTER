@@ -1,6 +1,6 @@
 [
   {
-    "name": "Teória",
+    "name": "Skúška teória",
     "questions": [
       {
         "question": "Majme tabuľku objektov typu t_osoba, pričom tento typ obsahuje nasledovnú metódu na triedenie objektov: map member function tried return integer Ktorý z nasledujúcich príkazov Select bude správne triediť podľa objektov? (2 b):",
@@ -41,7 +41,7 @@
         "question": "Podmienka serializovateľnosti je ? (2 b):",
         "answers": [
           {
-            "answer": "ze rozvrh dava rovnaky vysledok ako seriovy rozvrh",
+            "answer": "ze rozvrh dava rovnaky vysledok ako seriovy rozvrh alebo že rozvrh sa dá napísať ako sériový",
             "isCorrect": true,
             "id": 0
           }
@@ -561,7 +561,7 @@
         "question": "Aký je rozdiel medzi validným a správne štrukturovaným XML dokumentom? (2 b):",
         "answers": [
           {
-            "answer": "TODO",
+            "answer": "valídny má aj schému - TODO odpoved za 1b",
             "isCorrect": true,
             "id": 0
           }
@@ -881,7 +881,7 @@
         "question": "Pri ktorých DML operáciách sa nikdy nemení index? (2 b):",
         "answers": [
           {
-            "answer": "TODO",
+            "answer": "select",
             "isCorrect": true,
             "id": 0
           }
@@ -1183,52 +1183,32 @@
         ]
       },
       {
-        "question": "replace",
+        "question": "Pomocou SQL generujte príkazy na zrušenie linuxového konta všetkých zamestnancov, ktorí ukončili pracovný pomer v posledný mesiac, ak login je osobné číslo zamestnanca a syntax príkazu je: userdel login (3 b):",
         "answers": [
           {
-            "answer": "replace",
+            "answer": "select 'userdel ' || rod_cislo from p_zamestnanec where dat_do is not null and extract(month from (add_months(sysdate,-1))) = extract(month from dat_do);",
             "isCorrect": true,
             "id": 0
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 1
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 2
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 3
           }
         ]
       },
       {
-        "question": "replace",
+        "question": "Hinty v DBS Oracle (2 b):",
         "answers": [
           {
-            "answer": "replace",
+            "answer": "umožňujú užívateľovi ovplyvniť výber plánu vykonania príkazu",
             "isCorrect": true,
             "id": 0
           },
           {
-            "answer": "replace",
+            "answer": "informujú užívateľa ako zrýchliť plán vykonania",
             "isCorrect": false,
             "id": 1
           },
           {
-            "answer": "replace",
+            "answer": "predpisujú ako musí byť zostavený plán vykonania príkazu",
             "isCorrect": false,
             "id": 2
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 3
           }
         ]
       },
