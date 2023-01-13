@@ -86,7 +86,7 @@
         "question": "Napíšte najvhodnejší index pre tabuľku P_ODVOD_PLATBA pre nasledovný dotaz: select rod_cislo, meno, priezvisko, sum(suma) from p_osoba JOIN p_poistenie USING ( rod_cislo ) JOIN p_odvod_platba USING ( id_poistenca ) where to_char(obdobie, 'YYYY') = 2016 group by rod_cislo, meno, priezvisko ; (2 b):",
         "answers": [
           {
-            "answer": "CREATE INDEX IX1 ON p_odvod_platba(to_char(obdobie, 'YYYY'), suma) TODO 1b koment: suma(sum)",
+            "answer": "CREATE INDEX IX1 ON p_odvod_platba(to_char(obdobie, 'YYYY'), suma) TODO 1b koment: suma(sum); create index ind on p_odvod_platba(to_char(obdobie, 'YYYY') - tiez 1 bod",
             "isCorrect": true,
             "id": 0
           }
@@ -1116,7 +1116,7 @@
         "question": "Čo všetko je potrebné vykonať, aby sme zaručili, že do tabuľky osoba_xml budú vložené len XML dokumenty, ktoré sú validné voči schéme, ktorú máme v súbore osoba.xsd? ( nemusíte písať príkazy, stačí slovný popis v správnom poradí) (2 b):",
         "answers": [
           {
-            "answer": "Musime mat vytvorene directory, kde budeme schemy ukladat. Potom musime zaregistrovat schemu. Pri vytvoreni tabulky typu XML pridat aj zaregistrovanu schemu. Nasledne vytvorit trigger pred kazdym insertom, ktory bude mat za ulohu overit XML voci scheme.",
+            "answer": "Musime mat vytvorene directory, kde budeme schemy ukladat. Potom musime zaregistrovat schemu. Pri vytvoreni tabulky typu XML pridat aj zaregistrovanu schemu. Nasledne vytvorit trigger pred kazdym insertom, ktory bude mat za ulohu overit XML voci scheme. alebo '1. vytvorit schemu 2. zaregistrovat na serveri 3. vytvorit tabulku 4. vytvorit trigger' ",
             "isCorrect": true,
             "id": 0
           }
@@ -1218,100 +1218,85 @@
         ]
       },
       {
-        "question": "replace",
+        "question": "Aká hodnota bude vypísaná na obrazovke: declare type t_pole IS TABLE OF integer; pole t_pole; begin pole:=t_pole(10,20,30,40,50,60,70); pole.delete(4); dbms_output.put_line(pole.last); end; (1 b):",
         "answers": [
           {
-            "answer": "replace",
+            "answer": "7",
             "isCorrect": true,
             "id": 0
           },
           {
-            "answer": "replace",
+            "answer": "6",
             "isCorrect": false,
             "id": 1
           },
           {
-            "answer": "replace",
+            "answer": "10",
             "isCorrect": false,
             "id": 2
           },
           {
-            "answer": "replace",
+            "answer": "70",
             "isCorrect": false,
             "id": 3
           }
         ]
       },
       {
-        "question": "replace",
+        "question": "Vygenerujte príkazy na drop všetkých FK z tabuľky p_prispevky. USER_CONSTRAINT(#constraint_name, table_name, constraint_type, r_constraint_name(FK) ) Ak constraint_type je typu CHAR(1) a môže nadobúdať hodnoty s nasledovným významom (P-primary key, R-foreign key, C-check, U-unique,...) (3 b):",
         "answers": [
           {
-            "answer": "replace",
+            "answer": "TODO",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "declare type t_pole is table of integer; i integer; pole t_pole; j integer; begin pole := t_pole(1,2,3,4,5,6,7,8); pole.delete(3); j := pole.first; for i in 1 .. XXXXXX loop dbms_output.put_line(pole(j)); j := pole.next(j); end loop; end; / Čo je potrebné doplniť namiesto XXXXXX, aby boli vypísané všetky prvky poľa. (1 b):",
+        "answers": [
+          {
+            "answer": "iba pole.count",
             "isCorrect": true,
             "id": 0
           },
           {
-            "answer": "replace",
+            "answer": "iba pole.limit",
             "isCorrect": false,
             "id": 1
           },
           {
-            "answer": "replace",
+            "answer": "buď pole.last alebo pole.count",
             "isCorrect": false,
             "id": 2
           },
           {
-            "answer": "replace",
+            "answer": "iba pole.last",
             "isCorrect": false,
             "id": 3
           }
         ]
       },
       {
-        "question": "replace",
+        "question": "Operáciu UNDO aplikujem pri obnove databázy po havárii na transakcie: (2 b):",
         "answers": [
           {
-            "answer": "replace",
+            "answer": "T3,T4,T8,T9",
             "isCorrect": true,
             "id": 0
           },
           {
-            "answer": "replace",
+            "answer": "T3,T4,T8",
             "isCorrect": false,
             "id": 1
           },
           {
-            "answer": "replace",
+            "answer": "T5,T6,T7",
             "isCorrect": false,
             "id": 2
           },
           {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 3
-          }
-        ]
-      },
-      {
-        "question": "replace",
-        "answers": [
-          {
-            "answer": "replace",
-            "isCorrect": true,
-            "id": 0
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 1
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 2
-          },
-          {
-            "answer": "replace",
+            "answer": "T5,T6,T7,T9",
             "isCorrect": false,
             "id": 3
           }
