@@ -41,7 +41,7 @@
         "question": "Podmienka serializovateľnosti je ? (2 b):",
         "answers": [
           {
-            "answer": "ze rozvrh dava rovnaky vysledok ako seriovy rozvrh alebo že rozvrh sa dá napísať ako sériový",
+            "answer": "'ze rozvrh dava rovnaky vysledok ako seriovy rozvrh 'alebo 'že rozvrh sa dá napísať ako sériový' alebo 'Dostacujucou podmienkou serializovatelni je, ze v grafe precedencii transakcii neexistuje cyklus.'",
             "isCorrect": true,
             "id": 0
           }
@@ -184,11 +184,6 @@
             "answer": "T3,T4,T8,T9",
             "isCorrect": false,
             "id": 2
-          },
-          {
-            "answer": "T5,T6,T7",
-            "isCorrect": false,
-            "id": 3
           }
         ]
       },
@@ -596,7 +591,7 @@
         "question": "Aký je rozdiel medzi súborom typu CLOB a NCLOB? (2 b):",
         "answers": [
           {
-            "answer": "TODO",
+            "answer": "CLOB je subor reprezentovany charaktermi a NCLOB je reprezentovany n-rozmernymi charaktermi, akceptuje medzinarodne znaky",
             "isCorrect": true,
             "id": 0
           }
@@ -1098,7 +1093,7 @@
         ]
       },
       {
-        "question": "Čo znamená pravidlo idenpotencie pre operáciu UNDO? (2 b):",
+        "question": "Čo znamená pravidlo idenpotencie pre operáciu UNDO? (2 b): ( TODO SKONTROLOVAT)",
         "answers": [
           {
             "answer": "Stačí zopakovať všetky úspešne ukončené transakcie.",
@@ -1213,27 +1208,12 @@
         ]
       },
       {
-        "question": "replace",
+        "question": "Pomocou SQL vygenerujte príkaz pomocou ktorého zrušíte všetky tabuľky používateľa Kmat. (3 b):",
         "answers": [
           {
-            "answer": "replace",
+            "answer": "select 'DROP TABLE ' || username || '.' || table_name from users, tables where username LIKE 'Kmat';",
             "isCorrect": true,
             "id": 0
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 1
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 2
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 3
           }
         ]
       },
