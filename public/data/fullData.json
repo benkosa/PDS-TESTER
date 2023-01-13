@@ -41,7 +41,7 @@
         "question": "Podmienka serializovateľnosti je ? (2 b):",
         "answers": [
           {
-            "answer": "'ze rozvrh dava rovnaky vysledok ako seriovy rozvrh 'alebo 'že rozvrh sa dá napísať ako sériový' alebo 'Dostacujucou podmienkou serializovatelni je, ze v grafe precedencii transakcii neexistuje cyklus.'",
+            "answer": "'ze rozvrh dava rovnaky vysledok ako seriovy rozvrh 'alebo 'že rozvrh sa dá napísať ako sériový' alebo 'v grafe precedencii transakcii neexistuje cyklus.'",
             "isCorrect": true,
             "id": 0
           }
@@ -741,7 +741,7 @@
         "question": "Metóda kontrolného bodu Zoznam bežiacich transakcií v okamihu posledného kontrolného bodu . Ktoré transakcie už po havárii nebude spracovať (ani UNDO, ani REDO)? (2 b):",
         "answers": [
           {
-            "answer": "1, t2",
+            "answer": "T1, T2",
             "isCorrect": true,
             "id": 0
           }
@@ -1328,27 +1328,12 @@
         ]
       },
       {
-        "question": "replace",
+        "question": "Horizontálne fragmentujte aspoň na 3 fragmenty reláciu P_PRISPEVKY podľa typu príspevku. (2 b):",
         "answers": [
           {
-            "answer": "replace",
+            "answer": "define fragment prisp_1 as select * from p_prispevky where id_typu = 0; define fragment prisp_2 as select * from p_prispevky where id_typu = 1; define fragment prisp_3 as select * from p_prispevky where id_typu > 1;",
             "isCorrect": true,
             "id": 0
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 1
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 2
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 3
           }
         ]
       },
