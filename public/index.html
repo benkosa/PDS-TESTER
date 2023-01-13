@@ -53,7 +53,7 @@
                 </div>
             <div ng-init="showQuestion=false">
                 <div ng-show="question.answers.length === 1 && showQuestion === false">
-                      <button ng-click="showQuestion=true">Zobraz</button>
+                      <button class="bTestH unsetWidth" ng-click="showQuestion=true">Zobraz odpoveď</button>
                 </div>
                 <div ng-show="question.answers.length != 1 || showQuestion == true" ng-repeat="answer in question.answers">
                     <div class="{{answer.color == null ? 'bAnswer' : answer.color}}" ng-click="isCorrect(answer, test, question, testIndex, questionIndex)">{{answer.answer}}</div>
