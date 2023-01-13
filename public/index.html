@@ -66,7 +66,7 @@
         
     </div>
     
-    <div class="settings">
+    <div class="settings" ng-show="false">
         <div class="bTestH" ng-click="showAnswers = !showAnswers; setCookiesSettings('showAnswers', showAnswers)">
                 {{(showAnswers ? "Vypnúť" : "Zapnúť") + " zobrazovanie správnych odpovedí"}}            
         </div>
@@ -76,14 +76,11 @@
     </div>
 </div>
 <footer>
-    Zdrojový kód projektu: <a target="_blank" rel="noopener noreferrer" href="https://github.com/benkosa/PDS-TESTER/tree/master">github.com/benkosa</a>
-    <div>v 1.02</div>
     <p>
-        Pravopisné chyby alebo zlé odpovede môžete opravovať tu: 
+        Otázky môžete pridávať/upravovať tu: 
         <a target="_blank" href="https://github.com/benkosa/PDS-TESTER/blob/master/public/data/fullData.json">
             fullData.json
-        </a>. 
-        Ak opravujete zlú odpoveď, prosím pridajte do komentára aj dôkaz o vašom tvrdení.
+        </a>. Ak opravujete zlú odpoveď, prosím pridajte do komentára aj dôkaz.
     </p>
 </footer>
 </body>
