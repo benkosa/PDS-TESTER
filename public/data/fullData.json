@@ -1331,6 +1331,16 @@
             "id": 0
           }
         ]
+      },
+      {
+        "question": "Čo je to OLAP?",
+        "answers": [
+          {
+            "answer": "OLAP (On-Line Analytical Processing) pomáha porozumieť dátam pomocou rýchleho, konzistentného a interaktívneho prístupu k širokému spektru možných pohľadov na informácie, ktoré boli transofrmované zo surových dát, aby odrážali skutočný rozmer podniku, tak ako je chápaný z pohľadu používateľa.",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
       }
     ]
   }
