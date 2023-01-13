@@ -221,7 +221,9 @@ var app = angular
                         if(answer != null){
                             answers = data[i].questions[answer.q].answers[answer.a];
                             questions = data[i].questions[answer.q];
-                            $scope.isCorrect(answers, data[i], questions);
+                            try {
+                                $scope.isCorrect(answers, data[i], questions);
+                            } catch { }
                         }    
                     });
                 }                
