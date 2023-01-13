@@ -1303,25 +1303,25 @@
         ]
       },
       {
-        "question": "replace",
+        "question": "Aké informácie sa ukladajú do logického žurnálu? (2 b):",
         "answers": [
           {
-            "answer": "replace",
+            "answer": "informácie o bežiacich transakciách pre prípad potreby vykonania UNDO, alebo REDO operácie",
             "isCorrect": true,
             "id": 0
           },
           {
-            "answer": "replace",
+            "answer": "informácie o prihlásení jednotlivých užívateľov a ich aktivitách",
             "isCorrect": false,
             "id": 1
           },
           {
-            "answer": "replace",
+            "answer": "informácie o bežiacich procesoch operačného systému",
             "isCorrect": false,
             "id": 2
           },
           {
-            "answer": "replace",
+            "answer": "štatistiky od databázových objektoch, napr. kardinality relácií, blokovací faktor...",
             "isCorrect": false,
             "id": 3
           }
