@@ -124,6 +124,22 @@ var app = angular
                 }
             }
 
+            function shuffleQuestons(questions){
+                if($scope.canShuffle == false)
+                    return;
+
+                max = questions.length - 1;
+                repeatTo = questions.length/2;
+
+                for(i = 0; i < repeatTo; i++){
+                    id1 = getRandomInt(0,max);
+                    id2 = getRandomInt(0,max);
+                    tmp = questions[id1];
+                    questions[id1] = questions[id2];
+                    questions[id2] = tmp;
+                }
+            }
+
             /**
              * vynuluje body a odpovede pre dany test a premiesa 
              * odpovede, vymaze z cookies
@@ -213,6 +229,7 @@ var app = angular
 
             // parse questions
             data.forEach(test => {
+                shuffleQuestons(test.questions)
                 test.questions.forEach(question => {
                     shuffleAnswers(question);
                     question.question = question.question
