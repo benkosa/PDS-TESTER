@@ -77,7 +77,7 @@
         "answers": [
           {
             "answer": "8 10 6 9 2 5 7 1 4 3",
-            "isCorrect": false,
+            "isCorrect": true,
             "id": 0
           }
         ]
@@ -233,31 +233,6 @@
           {
             "answer": "iba pole.count",
             "isCorrect": true,
-            "id": 3
-          }
-        ]
-      },
-      {
-        "question": "replace",
-        "answers": [
-          {
-            "answer": "replace",
-            "isCorrect": true,
-            "id": 0
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 1
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
-            "id": 2
-          },
-          {
-            "answer": "replace",
-            "isCorrect": false,
             "id": 3
           }
         ]
