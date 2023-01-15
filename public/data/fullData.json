@@ -738,31 +738,6 @@
         ]
       },
       {
-        "question": "Určite ktorý z príkazov vráti SET množinu Príkaz 1: select id_poistenca, dat_od from p_poistenie; Príkaz 2: select DISTINCT id_poistenca, dat_od from p_poistenie; Príkaz 3: select id_poistenca from p_poistenie; (2 b):",
-        "answers": [
-          {
-            "answer": "všetky príkazy",
-            "isCorrect": true,
-            "id": 0
-          },
-          {
-            "answer": "príkazy1a2",
-            "isCorrect": false,
-            "id": 1
-          },
-          {
-            "answer": "ani jeden príkaz",
-            "isCorrect": false,
-            "id": 2
-          },
-          {
-            "answer": "len príkaz 2",
-            "isCorrect": false,
-            "id": 3
-          }
-        ]
-      },
-      {
         "question": "V akej štruktúre sa ukladajú zmenové vektory pri práci s materializovaným pohľadom? (2 b):",
         "answers": [
           {
