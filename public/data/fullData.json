@@ -696,7 +696,7 @@
         "question": "V akej štruktúre sa ukladajú šifrovacie kľúče typu SecureFile? (2 b)",
         "answers": [
           {
-            "answer": "TODO",
+            "answer": "Oracle wallet, ChatGPT: Oracle Wallet je softvérový nástroj, ktorý sa používa na uchovávanie šifrovacích kľúčov a certifikátov v bezpečnom formáte pre ich použitie v rámci Oracle databázy. Tento nástroj umožňuje uchovávať šifrovacie kľúče offline, takže sú chránené pred neoprávneným prístupom. Kľúče môžu byť tiež automaticky generované a spravované prostredníctvom Oracle Wallet Manager.",
             "isCorrect": true,
             "id": 0
           }
