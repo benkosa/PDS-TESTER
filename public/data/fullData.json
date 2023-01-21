@@ -1,6 +1,6 @@
 [
   {
-    "name": "Skúška teória",
+    "name": "Skúška ABC",
     "questions": [
       {
         "question": "Majme tabuľku objektov typu t_osoba, pričom tento typ obsahuje nasledovnú metódu na triedenie objektov: map member function tried return integer Ktorý z nasledujúcich príkazov Select bude správne triediť podľa objektov? (2 b):",
@@ -28,26 +28,6 @@
         ]
       },
       {
-        "question": "Aké hodnoty budú vypísané? declare type t_pole is table of integer; pole t_pole; begin pole := t_pole(1,2,3,4,5,6,7,8);pole.delete(2); FOR I in 1 .. pole.count LOOP if (pole.exists(i)) then dbms_output.put_line(pole(i)); end if; END LOOP; end; /",
-        "answers": [
-          {
-            "answer": "1 3 4 5 6 7",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
-        "question": "Podmienka serializovateľnosti je ? (2 b):",
-        "answers": [
-          {
-            "answer": "'ze rozvrh dava rovnaky vysledok ako seriovy rozvrh 'alebo 'že rozvrh sa dá napísať ako sériový' alebo 'v grafe precedencii transakcii neexistuje cyklus.'",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
         "question": "Ak už existuje na objekt A zámok typu S-LOCK, potom: (2 b):",
         "answers": [
           {
@@ -69,26 +49,6 @@
             "answer": "iná transakcia môže získať len zámok typu X-LOCK",
             "isCorrect": false,
             "id": 3
-          }
-        ]
-      },
-      {
-        "question": "Zoraďte tieto príkazy do správneho poradia, ak cur1 je správne deklarovaný kurzor pre príkaz Select priezvisko from os_udaje; a priezv je premenná typu os_udaje.priezvisko%TYPE. (1) END IF; (2) HTP.P(priezv); (3) CLOSE cur1; (4) END LOOP; (5) ELSE (6) FETCH cur1 INTO priezv; (7) EXIT; (8) OPEN cur1; (9) IF cur1%FOUND THEN (10) LOOP (2 b):",
-        "answers": [
-          {
-            "answer": "8 10 6 9 2 5 7 1 4 3",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
-        "question": "Napíšte najvhodnejší index pre tabuľku P_ODVOD_PLATBA pre nasledovný dotaz: select rod_cislo, meno, priezvisko, sum(suma) from p_osoba JOIN p_poistenie USING ( rod_cislo ) JOIN p_odvod_platba USING ( id_poistenca ) where to_char(obdobie, 'YYYY') = 2016 group by rod_cislo, meno, priezvisko ; (2 b):",
-        "answers": [
-          {
-            "answer": "CREATE INDEX IX1 ON p_odvod_platba(to_char(obdobie, 'YYYY'), suma) TODO 1b koment: suma(sum); create index ind on p_odvod_platba(to_char(obdobie, 'YYYY') - tiez 1 bod",
-            "isCorrect": true,
-            "id": 0
           }
         ]
       },
@@ -303,16 +263,6 @@
         ]
       },
       {
-        "question": "V akej situácii by ste preferovali použitie súboru typu BFILE pred BLOB? (2 b):",
-        "answers": [
-          {
-            "answer": "ked je potrebne data ukladat na disku nie v db",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
         "question": "V ODL je používanie kľúčov je: (2 b):",
         "answers": [
           {
@@ -518,16 +468,6 @@
         ]
       },
       {
-        "question": "Aký je rozdiel medzi validným a správne štrukturovaným XML dokumentom? (2 b):",
-        "answers": [
-          {
-            "answer": "valídny má aj schému - TODO odpoved za 1b",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
         "question": "Aké prostriedky môžeme použiť, ak potrebujeme spracovať výsledky selectu, ktorého stĺpce závisia od parametrov procedúry? (2 b):",
         "answers": [
           {
@@ -553,16 +493,6 @@
         ]
       },
       {
-        "question": "Aký je rozdiel medzi súborom typu CLOB a NCLOB? (2 b):",
-        "answers": [
-          {
-            "answer": "CLOB je subor reprezentovany charaktermi a NCLOB je reprezentovany n-rozmernymi charaktermi, akceptuje medzinarodne znaky",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
         "question": "Čo platí pre atribúty kolekcie typu NESTED TABLE? (2 b):",
         "answers": [
           {
@@ -584,16 +514,6 @@
             "answer": "count = last = limit",
             "isCorrect": false,
             "id": 3
-          }
-        ]
-      },
-      {
-        "question": "Aký je daný rozvrh S = {O11, O12, O13, O21, O22, O23, O14, O15, O16, O24, O25, O26}, ak sú dané dve Transakcie T1= {O11, O12, O13, O14, O15, O16} a T2 = {O21, O22, O23, O24,O25,O26}. (2 b):",
-        "answers": [
-          {
-            "answer": "serializovany",
-            "isCorrect": true,
-            "id": 0
           }
         ]
       },
@@ -689,26 +609,6 @@
             "answer": "constrainty budú kontrolované pre každý vkladaný riadok hneď pri vkladaní",
             "isCorrect": false,
             "id": 3
-          }
-        ]
-      },
-      {
-        "question": "V akej štruktúre sa ukladajú šifrovacie kľúče typu SecureFile? (2 b)",
-        "answers": [
-          {
-            "answer": "Oracle wallet, ChatGPT: Oracle Wallet je softvérový nástroj, ktorý sa používa na uchovávanie šifrovacích kľúčov a certifikátov v bezpečnom formáte pre ich použitie v rámci Oracle databázy. Tento nástroj umožňuje uchovávať šifrovacie kľúče offline, takže sú chránené pred neoprávneným prístupom. Kľúče môžu byť tiež automaticky generované a spravované prostredníctvom Oracle Wallet Manager.",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
-        "question": "Metóda kontrolného bodu Zoznam bežiacich transakcií v okamihu posledného kontrolného bodu . Ktoré transakcie už po havárii nebude spracovať (ani UNDO, ani REDO)? (2 b):",
-        "answers": [
-          {
-            "answer": "T1, T2",
-            "isCorrect": true,
-            "id": 0
           }
         ]
       },
@@ -838,16 +738,6 @@
         ]
       },
       {
-        "question": "Pri ktorých DML operáciách sa nikdy nemení index? (2 b):",
-        "answers": [
-          {
-            "answer": "select",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
         "question": "Konzistencia databázy je (2 b):",
         "answers": [
           {
@@ -939,26 +829,6 @@
             "answer": "Ak len jedna z viacerých podtransakcií vyšle operáciu COMMIT, globálna transakcia musí vysielať signál COMMIT aj ostatným podtransakciám",
             "isCorrect": false,
             "id": 3
-          }
-        ]
-      },
-      {
-        "question": "Pomocou SQL príkazu generujte príkazy na pridelenie práva 'create any directory' všetkým užívateľom z predmetu II07 v šk. roku 2005. (3 b):",
-        "answers": [
-          {
-            "answer": "SELECT 'GRANT CREATE ANY DIRECTORY TO ' || login FROM os_udaje WHERE cis_predm = 'II07' AND EXTRACT(YEAR FROM skrok) = 2005",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
-        "question": "Na akom princípe funguje aspekt deduplikácie pri súboroch? Nad ktorými typmi je možné ho aplikovať? (2 b):",
-        "answers": [
-          {
-            "answer": "Vypocita sa hash suboru, a ak sa zhoduje s hashom suboru, ktory je uz ulozeny v DB, pouzije sa uz ulozeny subor. Da sa aplikovat na SecureFile.",
-            "isCorrect": true,
-            "id": 0
           }
         ]
       },
@@ -1078,36 +948,6 @@
         ]
       },
       {
-        "question": "Čo všetko je potrebné vykonať, aby sme zaručili, že do tabuľky osoba_xml budú vložené len XML dokumenty, ktoré sú validné voči schéme, ktorú máme v súbore osoba.xsd? ( nemusíte písať príkazy, stačí slovný popis v správnom poradí) (2 b):",
-        "answers": [
-          {
-            "answer": "Musime mat vytvorene directory, kde budeme schemy ukladat. Potom musime zaregistrovat schemu. Pri vytvoreni tabulky typu XML pridat aj zaregistrovanu schemu. Nasledne vytvorit trigger pred kazdym insertom, ktory bude mat za ulohu overit XML voci scheme. alebo '1. vytvorit schemu 2. zaregistrovat na serveri 3. vytvorit tabulku 4. vytvorit trigger' ",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
-        "question": " Pred ktorými príkazmi začína nová transakcia? (stačí napísať čísla riadkov) -- pripojenie a vytvorenie session... 1 insert into pom values (1,2,'dnes'); 2 SAVEPOINT sp1; 3 insert into pom ( 2,2,'vcera'); 4 ROLLBACK TO sp1; 5 select * from pom; 6 create table pom_ou as select * from os_udaje where rod_cislo like '79%'; 7 select * from pom_ou; 8 COMMIT; 9 select * from pom; (2 b):",
-        "answers": [
-          {
-            "answer": "1,7,9",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
-        "question": "Čo vyjadruje písmeno C? select * from A.B@C; (2 b):",
-        "answers": [
-          {
-            "answer": "db link",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
         "question": "Čo vyjadruje písmeno A? select * from A.B@C; (2 b):",
         "answers": [
           {
@@ -1133,26 +973,6 @@
         ]
       },
       {
-        "question": "Môže existovať štruktúra typu BLOB taká, že existuje smerník, ale neexistuje hodnota? Ak áno, ako taká štruktúra vznikne? (2 b):",
-        "answers": [
-          {
-            "answer": "Ano, moze. Ak dva zaznamy sa odkazuju na ten isty blob, a jeden z tych zaznamov vymazem, vymaze sa aj blob, a v druhom zazname ostane referencia.",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
-        "question": "Pomocou SQL generujte príkazy na zrušenie linuxového konta všetkých zamestnancov, ktorí ukončili pracovný pomer v posledný mesiac, ak login je osobné číslo zamestnanca a syntax príkazu je: userdel login (3 b):",
-        "answers": [
-          {
-            "answer": "select 'userdel ' || rod_cislo from p_zamestnanec where dat_do is not null and extract(month from (add_months(sysdate,-1))) = extract(month from dat_do);",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
-      {
         "question": "Hinty v DBS Oracle (2 b):",
         "answers": [
           {
@@ -1169,16 +989,6 @@
             "answer": "predpisujú ako musí byť zostavený plán vykonania príkazu",
             "isCorrect": false,
             "id": 2
-          }
-        ]
-      },
-      {
-        "question": "Pomocou SQL vygenerujte príkaz pomocou ktorého zrušíte všetky tabuľky používateľa Kmat. (3 b):",
-        "answers": [
-          {
-            "answer": "select 'DROP TABLE ' || username || '.' || table_name from users, tables where username LIKE 'Kmat';",
-            "isCorrect": true,
-            "id": 0
           }
         ]
       },
@@ -1204,16 +1014,6 @@
             "answer": "70",
             "isCorrect": false,
             "id": 3
-          }
-        ]
-      },
-      {
-        "question": "Vygenerujte príkazy na drop všetkých FK z tabuľky p_prispevky. USER_CONSTRAINT(#constraint_name, table_name, constraint_type, r_constraint_name(FK) ) Ak constraint_type je typu CHAR(1) a môže nadobúdať hodnoty s nasledovným významom (P-primary key, R-foreign key, C-check, U-unique,...) (3 b):",
-        "answers": [
-          {
-            "answer": "TODO",
-            "isCorrect": true,
-            "id": 0
           }
         ]
       },
@@ -1291,7 +1091,197 @@
             "id": 3
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Skúška teória",
+    "questions": [
+      {
+        "question": "Podmienka serializovateľnosti je ? (2 b):",
+        "answers": [
+          {
+            "answer": "'ze rozvrh dava rovnaky vysledok ako seriovy rozvrh 'alebo 'že rozvrh sa dá napísať ako sériový' alebo 'v grafe precedencii transakcii neexistuje cyklus.'",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
       },
+      {
+        "question": "Zoraďte tieto príkazy do správneho poradia, ak cur1 je správne deklarovaný kurzor pre príkaz Select priezvisko from os_udaje; a priezv je premenná typu os_udaje.priezvisko%TYPE. (1) END IF; (2) HTP.P(priezv); (3) CLOSE cur1; (4) END LOOP; (5) ELSE (6) FETCH cur1 INTO priezv; (7) EXIT; (8) OPEN cur1; (9) IF cur1%FOUND THEN (10) LOOP (2 b):",
+        "answers": [
+          {
+            "answer": "8 10 6 9 2 5 7 1 4 3",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Napíšte najvhodnejší index pre tabuľku P_ODVOD_PLATBA pre nasledovný dotaz: select rod_cislo, meno, priezvisko, sum(suma) from p_osoba JOIN p_poistenie USING ( rod_cislo ) JOIN p_odvod_platba USING ( id_poistenca ) where to_char(obdobie, 'YYYY') = 2016 group by rod_cislo, meno, priezvisko ; (2 b):",
+        "answers": [
+          {
+            "answer": "CREATE INDEX IX1 ON p_odvod_platba(id_poistenca, to_char(obdobie, 'YYYY'), suma(sum));",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "V akej situácii by ste preferovali použitie súboru typu BFILE pred BLOB? (2 b):",
+        "answers": [
+          {
+            "answer": "ked je potrebne data ukladat na disku nie v db",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Aký je rozdiel medzi súborom typu CLOB a NCLOB? (2 b):",
+        "answers": [
+          {
+            "answer": "CLOB je subor reprezentovany charaktermi a NCLOB je reprezentovany n-rozmernymi charaktermi, akceptuje medzinarodne znaky",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+
+      {
+        "question": "Aký je daný rozvrh S = {O11, O12, O13, O21, O22, O23, O14, O15, O16, O24, O25, O26}, ak sú dané dve Transakcie T1= {O11, O12, O13, O14, O15, O16} a T2 = {O21, O22, O23, O24,O25,O26}. (2 b):",
+        "answers": [
+          {
+            "answer": "serializovany",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+
+      {
+        "question": "V akej štruktúre sa ukladajú šifrovacie kľúče typu SecureFile? (2 b)",
+        "answers": [
+          {
+            "answer": "Oracle wallet",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Metóda kontrolného bodu Zoznam bežiacich transakcií v okamihu posledného kontrolného bodu . Ktoré transakcie už po havárii nebude spracovať (ani UNDO, ani REDO)? (2 b):",
+        "answers": [
+          {
+            "answer": "T1, T2",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Pri ktorých DML operáciách sa nikdy nemení index? (2 b):",
+        "answers": [
+          {
+            "answer": "select",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+
+      {
+        "question": "Pomocou SQL príkazu generujte príkazy na pridelenie práva 'create any directory' všetkým užívateľom z predmetu II07 v šk. roku 2005. (3 b):",
+        "answers": [
+          {
+            "answer": "SELECT 'GRANT CREATE ANY DIRECTORY TO ' || login FROM os_udaje WHERE cis_predm = 'II07' AND EXTRACT(YEAR FROM skrok) = 2005",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Na akom princípe funguje aspekt deduplikácie pri súboroch? Nad ktorými typmi je možné ho aplikovať? (2 b):",
+        "answers": [
+          {
+            "answer": "Vypocita sa hash suboru, a ak sa zhoduje s hashom suboru, ktory je uz ulozeny v DB, pouzije sa uz ulozeny subor. Da sa aplikovat na SecureFile.",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+
+      {
+        "question": "Čo všetko je potrebné vykonať, aby sme zaručili, že do tabuľky osoba_xml budú vložené len XML dokumenty, ktoré sú validné voči schéme, ktorú máme v súbore osoba.xsd? ( nemusíte písať príkazy, stačí slovný popis v správnom poradí) (2 b):",
+        "answers": [
+          {
+            "answer": "Musime mat vytvorene directory, kde budeme schemy ukladat. Potom musime zaregistrovat schemu. Pri vytvoreni tabulky typu XML pridat aj zaregistrovanu schemu. Nasledne vytvorit trigger pred kazdym insertom, ktory bude mat za ulohu overit XML voci scheme. alebo '1. vytvorit schemu 2. zaregistrovat na serveri 3. vytvorit tabulku 4. vytvorit trigger' ",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": " Pred ktorými príkazmi začína nová transakcia? (stačí napísať čísla riadkov) -- pripojenie a vytvorenie session... 1 insert into pom values (1,2,'dnes'); 2 SAVEPOINT sp1; 3 insert into pom ( 2,2,'vcera'); 4 ROLLBACK TO sp1; 5 select * from pom; 6 create table pom_ou as select * from os_udaje where rod_cislo like '79%'; 7 select * from pom_ou; 8 COMMIT; 9 select * from pom; (2 b):",
+        "answers": [
+          {
+            "answer": "1,7,9",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Čo vyjadruje písmeno C? select * from A.B@C; (2 b):",
+        "answers": [
+          {
+            "answer": "db link",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Môže existovať štruktúra typu BLOB taká, že existuje smerník, ale neexistuje hodnota? Ak áno, ako taká štruktúra vznikne? (2 b):",
+        "answers": [
+          {
+            "answer": "Ano, moze. Ak dva zaznamy sa odkazuju na ten isty blob, a jeden z tych zaznamov vymazem, vymaze sa aj blob, a v druhom zazname ostane referencia.",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Pomocou SQL generujte príkazy na zrušenie linuxového konta všetkých zamestnancov, ktorí ukončili pracovný pomer v posledný mesiac, ak login je osobné číslo zamestnanca a syntax príkazu je: userdel login (3 b):",
+        "answers": [
+          {
+            "answer": "select 'userdel ' || rod_cislo from p_zamestnanec where dat_do is not null and extract(month from (add_months(sysdate,-1))) = extract(month from dat_do);",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Pomocou SQL vygenerujte príkaz pomocou ktorého zrušíte všetky tabuľky používateľa Kmat. (3 b):",
+        "answers": [
+          {
+            "answer": "select 'DROP TABLE ' || username || '.' || table_name from users, tables where username LIKE 'Kmat';",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Vygenerujte príkazy na drop všetkých FK z tabuľky p_prispevky. USER_CONSTRAINT(#constraint_name, table_name, constraint_type, r_constraint_name(FK) ) Ak constraint_type je typu CHAR(1) a môže nadobúdať hodnoty s nasledovným významom (P-primary key, R-foreign key, C-check, U-unique,...) (3 b):",
+        "answers": [
+          {
+            "answer": "TODO",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+
       {
         "question": "Horizontálne fragmentujte aspoň na 3 fragmenty reláciu P_PRISPEVKY podľa typu príspevku. (2 b):",
         "answers": [
@@ -1302,16 +1292,7 @@
           }
         ]
       },
-      {
-        "question": "Vertikálne fragmentujte reláciu P_PRISPEVKY aspoň na 2 fragmenty. (2 b):",
-        "answers": [
-          {
-            "answer": "define fragment prisp_1 as select obdobie, id_poberatela id_typu from p_prispevky; define fragment prisp_2 as select obdobie, id_poberatela, kedy, suma from p_prispevky;",
-            "isCorrect": true,
-            "id": 0
-          }
-        ]
-      },
+
       {
         "question": "Čo je hint no logging?",
         "answers": [
@@ -1341,8 +1322,37 @@
             "id": 0
           }
         ]
+      },
+      {
+        "question": "Aký je rozdiel medzi validným a správne štrukturovaným XML dokumentom? (2 b):",
+        "answers": [
+          {
+            "answer": "valídny má aj schému - TODO odpoved za 1b",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Aké hodnoty budú vypísané? declare type t_pole is table of integer; pole t_pole; begin pole := t_pole(1,2,3,4,5,6,7,8);pole.delete(2); FOR I in 1 .. pole.count LOOP if (pole.exists(i)) then dbms_output.put_line(pole(i)); end if; END LOOP; end; /",
+        "answers": [
+          {
+            "answer": "1 3 4 5 6 7",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
+      },
+      {
+        "question": "Vertikálne fragmentujte reláciu P_PRISPEVKY aspoň na 2 fragmenty. (2 b):",
+        "answers": [
+          {
+            "answer": "define fragment prisp_1 as select obdobie, id_poberatela id_typu from p_prispevky; define fragment prisp_2 as select obdobie, id_poberatela, kedy, suma from p_prispevky;",
+            "isCorrect": true,
+            "id": 0
+          }
+        ]
       }
     ]
   }
- 
 ]
