@@ -219,9 +219,9 @@ var app = angular
                     //testujeme vsetky odpovede z cookies
                     cookie.a.forEach(function(answer){    
                         if(answer != null){
-                            answers = data[i].questions[answer.q].answers[answer.a];
-                            questions = data[i].questions[answer.q];
                             try {
+                                answers = data[i].questions[answer.q].answers[answer.a];
+                                questions = data[i].questions[answer.q];
                                 $scope.isCorrect(answers, data[i], questions);
                             } catch { }
                         }    
